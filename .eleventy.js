@@ -16,8 +16,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget("./projects.css");
 
     return {
-        pathPrefix: "/Grigore-Stefania/",
-        // Opțional: Definește directorul de intrare (sursa)
+        pathPrefix: "/Grigore-Stefania",
+
         dir: {
             input: ".", 
             output: "_site" // Directorul unde va genera fișierele HTML finale
