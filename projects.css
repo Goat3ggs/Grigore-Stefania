@@ -1,0 +1,128 @@
+.project-view {
+    margin-left: 300px; /* Face loc sidebar-ului fix */
+    padding: 60px 0; /* Padding generos */
+
+}
+
+.project-content {
+    max-width: 1100px;
+    margin: 0 auto; /* CENTRAREA REALĂ */
+    padding: 0 40px;
+}
+
+.project-nav {
+    margin-bottom: 60px;
+}
+
+.back-link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom: 2px solid #333;
+    padding-bottom: 2px;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.back-link:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #888;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.project-meta-unite span {
+    padding-left: 10px;
+}
+
+.project-meta-unite span:hover {
+    color: #fff;
+}
+
+.desc-color {
+    color: #cfd8e3;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.project-description {
+    font-size: 18px;
+    line-height: 1.2;
+    max-width: 70%;
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 25px
+}
+
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0; /* Spațiu mare între imagini */
+}
+
+.project-gallery img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.project-navigation {
+    margin-top: 100px;
+    padding: 20px 15px;
+    /* border-top: 1px solid #333; */
+}
+
+.project-navigation a {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #888;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Responsive pentru mobil */
+@media (max-width: 768px) {
+    .project-view {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .project-title {
+        font-size: 2.5rem;
+    }
+    .project-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
