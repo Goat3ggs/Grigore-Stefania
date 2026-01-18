@@ -39,14 +39,14 @@ gallery_images:
                 <div class="project-meta">
                     <span><strong>Software:</strong> {{ image.software }}</span>
                     <div class="project-meta-unite">
-                        <span><a href="{{ image.live }}" target="_blank">Live</a></span>
-                        <span><a href="{{ image.codeLink }}" target="_blank">Code</a></span>
+                        <span><a href="{{ image.live | url }}" target="_blank">Live</a></span>
+                        <span><a href="{{ image.codeLink | url }}" target="_blank">Code</a></span>
                     </div>
                 </div>
                 <div class="project-description">
                     <p>{{ image.desc }}</p>
                 </div>
-                <img src="{{ image.src }}" alt="{{ image.alt }}">
+                <img src="{{ image.src | url }}" alt="{{ image.alt }}">
             </header>
         {% endfor %}
     </div>
