@@ -1,0 +1,58 @@
+---
+# FRONT MATTER (Datele pentru {{ }})
+layout: base.html
+permalink: /projects/02-web-dev/index.html
+1title: Apps
+
+# Lista de imagini (pentru a itera)
+gallery_images:
+  - title: To-Do App
+    live: https://goat3ggs.github.io/react-todo-list/
+    codeLink: https://github.com/Goat3ggs/react-todo-list
+    software: React · TypeScript · Vite
+    desc: A lightweight To-Do application designed for daily task management, featuring task creation, deletion and completion tracking.
+    src: /Assets/refined-todo.jpg
+    alt: todo app
+  - title: Contact Form
+    live: https://goat3ggs.github.io/contact-form/
+    codeLink: https://github.com/Goat3ggs/contact-form
+    software: JavaScript · HTML · CSS
+    desc: A sleek and user-friendly contact form with real-time validation and responsive design, perfect for any website looking to enhance user interaction.
+    src: /Assets/contact-form.jpg # Adaugă o sursă și aici
+    alt: contact form
+  - title: Landing Page
+    live: https://goat3ggs.github.io/landing-page/
+    codeLink: https://github.com/Goat3ggs/landing-page
+    software:   HTML · CSS 
+    desc: A modern and responsive landing page template suitable for startups and businesses, featuring a clean design and clear call-to-action sections.
+    src: /Assets/landing-page.jpg
+    alt: landing page
+---
+
+<a id="top"></a>
+<main class="project-view">
+    
+    <div class="project-gallery">
+        {% for image in gallery_images %}
+            <header class="project-header">
+                <h1 class="project-title">{{ image.title }}</h1>
+                <div class="project-meta">
+                    <span><strong>Software:</strong> {{ image.software }}</span>
+                    <div class="project-meta-unite">
+                        <span><a href="{{ image.live }}" target="_blank">Live</a></span>
+                        <span><a href="{{ image.codeLink }}" target="_blank">Code</a></span>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>{{ image.desc }}</p>
+                </div>
+                <img src="{{ image.src }}" alt="{{ image.alt }}">
+            </header>
+        {% endfor %}
+    </div>
+
+    <div class="project-navigation">
+        <a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+</main>

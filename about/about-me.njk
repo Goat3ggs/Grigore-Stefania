@@ -1,0 +1,38 @@
+---
+# FRONT MATTER (Datele pentru {{ }})
+layout: base.html
+permalink: /about/about-me/index.html
+title: I'm Stefania Grigore
+contact: stefaniagrigore91@gmail.com 
+description: |
+    I’m a Romania-based creative working at the intersection of graphic design, web development, and game development. My work explores visual systems, interaction, and experimentation across different mediums — from posters and digital layouts to interactive web projects and games.
+
+# Lista de imagini (pentru a itera)
+gallery_images:
+  - src: /Assets/bk-blur-crop.jpg
+    alt: image with the author
+---
+
+<main class="project-view">
+    <div class="project-content">
+        <header class="project-header" style="padding-top:5rem;">
+            <h1 class="project-title">{{ title }}</h1>
+            
+            <div class="project-meta">
+                <span><strong>Contact me:</strong> <a href="mailto:{{ contact }}">{{ contact }}</a></span>
+                
+            </div>
+
+            <div class="project-description">
+                <p style="font-size: 18px">{{ description }}</p>
+            </div>
+        </header>
+
+        <div class="project-gallery">
+            {% for image in gallery_images %}
+                <img src="{{ image.src }}" alt="{{ image.alt }}" style="width: 60%;">
+            {% endfor %}
+        </div>
+
+    </div>
+</main>

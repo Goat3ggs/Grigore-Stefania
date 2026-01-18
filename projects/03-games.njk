@@ -1,0 +1,50 @@
+---
+# FRONT MATTER (Datele pentru {{ }})
+layout: base.html
+permalink: /projects/03-games/index.html
+title: Hangman Game
+live: https://goat3ggs.github.io/hangman-game/
+codeLink: https://github.com/Goat3ggs/hangman-game
+software: React · TypeScript · Vite
+description: |
+    Simple but fun Hangman game built with React and TypeScript. Guess the word before the hangman is complete!
+src: /Assets/hangman-1.png
+alt: todo app
+
+# Lista de imagini (pentru a itera)
+gallery_images:
+  - src: /Assets/01-hangman-initial.png
+    alt: hangman initial state
+  - src: /Assets/02-hangman-correct.png
+    alt: hangman correct guess
+  - src: /Assets/03-hangman-wrong.png
+    alt: hangman wrong guess
+---
+
+<main class="project-view">
+    
+    <header class="project-header">
+        <h1 class="project-title">{{ title }}</h1>
+
+        <div class="project-meta">
+            <span><strong>Software:</strong> {{ software }}</span>
+            <div class="project-meta-unite">
+                <span><a href="{{ live }}" target="_blank">Live</a></span>
+                <span><a href="{{ codeLink }}" target="_blank">Code</a></span>
+            </div>
+        </div>
+        <div class="project-description">
+            <p style="font-size: 18px">{{ description }}</p>
+        </div>
+    </header>
+
+    <div class="project-gallery">
+        {% for image in gallery_images %}
+            <img src="{{ image.src }}" alt="{{ image.alt }}">
+        {% endfor %}
+    </div>
+
+    <div class="project-navigation">
+        <a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+</main>

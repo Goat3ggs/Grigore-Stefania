@@ -1,0 +1,51 @@
+---
+# FRONT MATTER (Datele pentru {{ }})
+layout: base.html
+permalink: /projects/01-experimental-posters/index.html
+title: Grapichs
+category: 
+software: Adobe Photoshop · Illustrator
+year: 
+description: |
+    What you see here is a combination of various textures and typography,
+    resulting in some experimental designs.
+
+# Lista de imagini (pentru a itera)
+gallery_images:
+  - src: /Assets/dark-poster.jpg
+    alt: series-dark-poster
+  - src: /Assets/dandelion-poster.jpg
+    alt: Detaliu arhitectural neon
+  - src: /Assets/tyler-creator-poster.jpg
+    alt: Textura de perete
+  - src: /Assets/pistol-poster.jpg
+    alt: Pistol poster   
+  - src: /Assets/city.jpg
+    alt: Textura de perete
+---
+<a id="top"></a>
+<main class="project-view">
+    
+    <header class="project-header">
+        <h1 class="project-title">{{ title }}</h1>
+        
+        <div class="project-meta">
+            <span><strong>Software:</strong> {{ software }}</span>
+        </div>
+
+        <div class="project-description">
+            <p style="font-size: 18px">{{ description }}</p>
+        </div>
+    </header>
+
+    <div class="project-gallery">
+        {% for image in gallery_images %}
+            <img src="{{ image.src }}" alt="{{ image.alt }}">
+        {% endfor %}
+    </div>
+
+    <div class="project-navigation">
+        <a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+</main>

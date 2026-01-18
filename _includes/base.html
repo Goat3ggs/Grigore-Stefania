@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefania Grigore - {{ title }}</title> 
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout"> 
+        
+        <header class="sidebar"> 
+            {% include "sidebar.html" %} 
+        </header>
+
+        {{ content }}
+        
+    </div>
+<script src="/active-link.js"></script>
+</body>
+</html>

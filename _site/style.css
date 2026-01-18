@@ -1,0 +1,270 @@
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fundal închis (aproape negru) și text alb */
+    background-color: #111111; 
+    color: #eeeeee;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* --- LAYOUT --- */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR (Stânga) --- */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid transparent;
+    z-index: 10;
+    background-color: #111111; /* Asigură-te că sidebar-ul are fundal în cazul scrolling-ului */
+}
+
+/* Numele mare și bold */
+.brand h1 {
+    font-size: 2rem;
+    font-weight: 900; 
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #ffffff; /* Alb pur pentru titlu */
+}
+
+.role {
+    font-size: 0.85rem;
+    color: #999; /* Gri deschis pentru subtitlu */
+    line-height: 1.4;
+    margin-bottom: 60px;
+}
+
+/* Navigația */
+.nav-group {
+    margin-bottom: 30px;
+}
+
+.nav-group span {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #555; /* Gri mai închis pentru etichete */
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.main-nav .info-group a {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.main-nav a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ddd; /* Alb murdar pentru linkuri */
+}
+
+.main-nav a:hover {
+    color: #6b6b6b;
+}
+
+.main-nav .nav-group a.active {
+    color: rgb(215, 3, 63) !important;
+    /* color: #6b6b6b !important; */
+}
+
+/* Social Media */
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.socials a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.socials a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #444;
+}
+
+/* --- CONTENT & GALERIE (Dreapta) --- */
+.gallery-container {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    padding: 60px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Cardul Proiectului */
+.project-item {
+    display: block;
+    width: 100%;
+
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%; 
+    overflow: hidden;
+    background: #222; /* Fundal placeholder mai închis */
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Opțional: reducem puțin luminozitatea imaginilor ca să nu fie prea stridente pe fundal negru */
+    filter: brightness(0.9); 
+
+}
+
+/* Hover Effect */
+.hover-reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Fundal semi-transparent la hover (puțin mai deschis decât fundalul paginii pentru contrast) */
+    background-color: rgba(8, 8, 8, 0.692); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    text-align: center;
+    padding: 20px 30px;
+    border: 1px solid #333; /* Un contur subtil */
+}
+
+.project-item:hover .hover-reveal {
+    opacity: 1;
+}
+
+.project-item:hover img {
+    transform: scale(1.09);
+    filter: brightness(1); /* Revenim la luminozitate normală */
+}
+
+.hover-reveal h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hover-reveal .tag {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-footer {
+    margin-top: 100px;
+    padding-top: 60px;
+    border-top: 2px solid #333; /* Linie gri închis */
+}
+
+.contact-footer h3 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    color: #fff;
+}
+
+.email-link {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #fff; /* Linie albă */
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.email-link:hover {
+    background-color: #fff;
+    color: #000; /* Inversăm culorile la hover pe email */
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 40px 20px;
+        border-bottom: 1px solid #222;
+    }
+
+    .gallery-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .brand h1 {
+        font-size: 2.5rem;
+    }
+    
+    .project-grid {
+        gap: 20px;
+    }
+}
