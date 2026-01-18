@@ -30,7 +30,7 @@ gallery_images:
 
         <div class="project-gallery">
             {% for image in gallery_images %}
-                <img src="{{ image.src }}" alt="{{ image.alt }}" style="width: 60%;">
+                <img src="{{ image.src | url }}" alt="{{ image.alt }}" style="width: 60%;">
             {% endfor %}
         </div>
 

@@ -1,7 +1,7 @@
 <header class="sidebar">
             <div class="top-section">
                 <div class="brand">
-                    <a href="/">
+                    <a href="{{ '/' | url }}">
                         <h1 class="logo-name">Stefania<br>Grigore</h1>
                     </a>
                     <p class="role">Graphic Design &<br>Concept Art</p>
@@ -10,13 +10,13 @@
                 <nav class="main-nav">
                     <div class="nav-group">
                         <span>Projects</span>
-                        <a href="/projects/01-experimental-posters/">Graphics</a>
-                        <a href="/projects/02-web-dev/">Web Development</a>
-                        <a href="/projects/03-games/">Hangman Game</a>
+                        <a href="{{ '/projects/01-experimental-posters/' | url }}">Graphics</a>
+                        <a href="{{ '/projects/02-web-dev/' | url }}">Web Development</a>
+                        <a href="{{ '/projects/03-games/' | url }}">Hangman Game</a>
                     </div>
 
                     <div class="nav-group info-group">
-                        <a href="/about/about-me/">About Me</a>
+                        <a href="{{ '/about/about-me/' | url }}">About Me</a>
                         <!-- <a href="index.html#contact">Contact</a> -->
                     </div>
                 </nav>
