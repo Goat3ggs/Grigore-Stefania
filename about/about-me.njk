@@ -25,15 +25,18 @@ gallery_images:
             </div>
 
             <div class="project-description">
-                <p style="font-size: 18px">{{ description }}</p>
+                <p>{{ description }}</p>
             </div>
         </header>
 
-        <div class="project-gallery">
+        <div class="project-gallery about-gallery">
             {% for image in gallery_images %}
-                <img src="{{ image.src | url }}" alt="{{ image.alt }}" style="width: 60%;">
+                <img src="{{ image.src | url }}" alt="{{ image.alt }}" >
             {% endfor %}
         </div>
+    </div>
 
+    <div class="project-navigation">
+        <a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
     </div>
 </main>

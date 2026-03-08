@@ -4,6 +4,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
 
 body {
     /* Fundal închis (aproape negru) și text alb */
@@ -189,6 +202,7 @@ a {
     width: 100%;
 }
 
+
 @media (min-width: 1025px) {
     .layout {
         flex-direction: row;
@@ -202,7 +216,7 @@ a {
         opacity: 1 !important;
         visibility: visible !important;
         pointer-events: auto !important;
-        display: block;
+        justify-content: space-between;
         position: static;
         width: auto;
         height: auto;
@@ -222,6 +236,10 @@ a {
         flex-direction: column;
         justify-content: space-between;
         padding: 40px;
+    }
+
+    .brand{
+        margin-bottom: 50px;
     }
 
     .brand h1 {
@@ -271,10 +289,6 @@ a {
     font-size: 0.75rem;
     color: #444;
 }
-
-
-
-
 
 /* Cardul Proiectului */
 .project-item {
@@ -350,13 +364,13 @@ a {
 
 /* --- CONTACT SECTION --- */
 .contact-footer {
-    margin-top: 100px;
-    padding-top: 60px;
+    margin-top: 50px;
+    padding-top: 10px;
     border-top: 2px solid #333; /* Linie gri închis */
 }
 
-.contact-footer h3 {
-    font-size: 3rem;
+.contact-footer a {
+    font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 20px;
     letter-spacing: -2px;
