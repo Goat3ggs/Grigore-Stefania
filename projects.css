@@ -1,7 +1,9 @@
-.project-view {
-    margin-left: 300px; /* Face loc sidebar-ului fix */
-    padding: 60px 0; /* Padding generos */
 
+@media (min-width: 1025px) {
+    .project-view {
+        margin-left: 300px;
+        padding: 60px 0;
+    }
 }
 
 .project-content {
@@ -109,6 +111,10 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.project-navigation a:hover {
+    color: #fff;
 }
 
 /* Responsive pentru mobil */
