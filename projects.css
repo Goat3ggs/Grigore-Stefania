@@ -1,7 +1,8 @@
-.project-view {
-    margin-left: 300px; /* Face loc sidebar-ului fix */
-    padding: 60px 0; /* Padding generos */
-
+@media (min-width: 1025px) {
+    .project-view {
+        margin-left: 300px;
+        padding: 60px 0;
+    }
 }
 
 .project-content {
@@ -74,12 +75,14 @@
 }
 
 .project-description {
-    font-size: 18px;
     line-height: 1.2;
-    max-width: 70%;
     color: #ddd;
     text-align: center;
     margin-bottom: 25px
+}
+
+.project-description p {
+    font-size: 1.1rem;
 }
 
 .project-gallery {
@@ -89,10 +92,27 @@
 }
 
 .project-gallery img {
-    width: 80%;
     height: auto;
     display: block;
     margin: auto;
+}
+
+.about-gallery img{
+    width: 100%;
+}
+
+@media (min-width: 750px) {
+    .project-gallery img {
+        width: 80%;
+    }
+
+    .project-description {
+    max-width: 70%;
+    }
+
+    .about-gallery img{
+    width: 70%;
+}
 }
 
 .project-navigation {
@@ -111,6 +131,10 @@
     gap: 10px;
 }
 
+.project-navigation a:hover {
+    color: #fff;
+}
+
 /* Responsive pentru mobil */
 @media (max-width: 768px) {
     .project-view {
@@ -118,7 +142,7 @@
         padding: 20px;
     }
     .project-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .project-meta {
         flex-direction: column;
